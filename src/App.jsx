@@ -5,6 +5,7 @@ import Topbar from './components/Topbar';
 import BlobBackground from './components/BlobBackground';
 import Withdraw from './pages/Withdraw';
 import Transfer from './pages/Transfer';
+import TransactionHistory from './pages/TransactionHistory';
 
 // Pages
 import Dashboard from './pages/Dashboard';
@@ -27,6 +28,8 @@ function App() {
               {/* Optional routes if needed */}
               <Route path="/withdraw" element={<Withdraw />} />
               <Route path="/transfer" element={<Transfer />} />
+              <Route path="/transactions" element={<TransactionHistory />} />
+
             </Routes>
           </div>
         </div>
