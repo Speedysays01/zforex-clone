@@ -7,7 +7,7 @@ import Today from '../components/Today';
 const Dashboard = () => {
   return (
     <>
-    <div className="ml-64 mt-20 p-6 transition-all duration-300 relative">
+    <div className="ml-64 mt-2 p-6 transition-all duration-300 relative">
       {/* Header Section */}
       <DashboardHeader />
 
@@ -21,6 +21,7 @@ const Dashboard = () => {
 
 
     </div>
+    <Today/>
     </>
   );
 };

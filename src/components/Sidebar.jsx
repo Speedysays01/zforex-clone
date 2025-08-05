@@ -1,28 +1,31 @@
 import { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import {
   FaHome, FaMoneyBillAlt, FaExchangeAlt, FaHistory, FaUserPlus,
   FaList, FaTrophy, FaChartLine, FaUserFriends, FaUserTie,
   FaChartBar, FaPercent, FaBars
 } from 'react-icons/fa';
 
+// Define routes for each label
 const menuItems = [
-  { icon: <FaHome />, label: 'Dashboard' },
-  { icon: <FaMoneyBillAlt />, label: 'Deposit' },
-  { icon: <FaExchangeAlt />, label: 'Withdrawal' },
-  { icon: <FaExchangeAlt />, label: 'Transfer' },
-  { icon: <FaHistory />, label: 'Transaction History' },
-  { icon: <FaUserPlus />, label: 'Open New Account' },
-  { icon: <FaList />, label: 'Account List' },
-  { icon: <FaTrophy />, label: 'Trading Contest' },
-  { icon: <FaChartLine />, label: 'Trading Platforms' },
-  { icon: <FaUserFriends />, label: 'Refer A Friend' },
-  { icon: <FaUserTie />, label: 'IB Account' },
-  { icon: <FaChartBar />, label: 'Partner Dashboard' },
-  { icon: <FaPercent />, label: 'IB Commission' },
+  { icon: <FaHome />, label: 'Dashboard', path: '/' },
+  { icon: <FaMoneyBillAlt />, label: 'Deposit', path: '/deposit' },
+  { icon: <FaExchangeAlt />, label: 'Withdrawal', path: '/withdrawal' },
+  { icon: <FaExchangeAlt />, label: 'Transfer', path: '/transfer' },
+  { icon: <FaHistory />, label: 'Transaction History', path: '/transactions' },
+  { icon: <FaUserPlus />, label: 'Open New Account', path: '/open-account' },
+  { icon: <FaList />, label: 'Account List', path: '/accounts' },
+  { icon: <FaTrophy />, label: 'Trading Contest', path: '/contest' },
+  { icon: <FaChartLine />, label: 'Trading Platforms', path: '/platforms' },
+  { icon: <FaUserFriends />, label: 'Refer A Friend', path: '/refer' },
+  { icon: <FaUserTie />, label: 'IB Account', path: '/ib-account' },
+  { icon: <FaChartBar />, label: 'Partner Dashboard', path: '/partner' },
+  { icon: <FaPercent />, label: 'IB Commission', path: '/commission' },
 ];
 
 const Sidebar = () => {
   const [collapsed, setCollapsed] = useState(false);
+  const location = useLocation();
 
   return (
     <div className={`fixed top-0 left-0 h-screen z-20 transition-all duration-300 ${collapsed ? 'w-20' : 'w-64'}`}>
@@ -38,21 +41,14 @@ const Sidebar = () => {
 
         {/* Header with Toggle */}
         <div className="h-20 flex items-center border-b border-gray-700 mb-4 relative">
-          {/* Toggle Button */}
-    
-
-          {/* Logo text (only when expanded) */}
           {!collapsed && (
             <div className="ml-8 text-2xl font-bold tracking-wide">
               ZForexLive
             </div>
-
-            
           )}
-
-                <button
+          <button
             onClick={() => setCollapsed(!collapsed)}
-            className=" top-4 text-xl p-2 hover:text-indigo-500 transition-all z-30"
+            className="top-4 text-xl p-2 hover:text-indigo-500 transition-all z-30 ml-auto"
           >
             <FaBars />
           </button>
@@ -61,13 +57,14 @@ const Sidebar = () => {
         {/* Menu Items */}
         <nav className="space-y-2 max-h-[calc(100vh-100px)] pr-1">
           {menuItems.map((item, index) => (
-            <NavItem
-              key={index}
-              icon={item.icon}
-              label={item.label}
-              active={index === 0}
-              collapsed={collapsed}
-            />
+            <Link to={item.path} key={index}>
+              <NavItem
+                icon={item.icon}
+                label={item.label}
+                active={location.pathname === item.path}
+                collapsed={collapsed}
+              />
+            </Link>
           ))}
         </nav>
       </div>
