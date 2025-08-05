@@ -6,6 +6,7 @@ import BlobBackground from './components/BlobBackground';
 import Withdraw from './pages/Withdraw';
 import Transfer from './pages/Transfer';
 import TransactionHistory from './pages/TransactionHistory';
+import New from './pages/New'; // if you have a New component, otherwise remove this import
 
 // Pages
 import Dashboard from './pages/Dashboard';
@@ -29,7 +30,7 @@ function App() {
               <Route path="/withdraw" element={<Withdraw />} />
               <Route path="/transfer" element={<Transfer />} />
               <Route path="/transactions" element={<TransactionHistory />} />
-
+               <Route path="/open-account" element={<New />} />
             </Routes>
           </div>
         </div>
