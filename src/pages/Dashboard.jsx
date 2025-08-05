@@ -1,9 +1,13 @@
 import DashboardHeader from '../components/DashboardHeader';
 import StatCard from '../components/StatCard';
+import PerformanceChart from '../components/PerformanceChart';
+import DailyHoverChart from '../components/DailyHoverChart';
+import Today from '../components/Today';
 
 const Dashboard = () => {
   return (
-    <div className="ml-64 mt-20 p-6 transition-all duration-300">
+    <>
+    <div className="ml-64 mt-20 p-6 transition-all duration-300 relative">
       {/* Header Section */}
       <DashboardHeader />
 
@@ -15,8 +19,9 @@ const Dashboard = () => {
         <StatCard label="MT5 Accounts" value="4" color="purple" icon="💼" />
       </div>
 
-      {/* Other sections here */}
+
     </div>
+    </>
   );
 };
 

@@ -2,6 +2,8 @@ import Sidebar from './components/Sidebar';
 import Topbar from './components/Topbar';
 import Dashboard from './pages/Dashboard';
 import BlobBackground from './components/BlobBackground';
+import Today from './components/Today';
+import PerformanceChart from './components/PerformanceChart';
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
         <div className="flex-1">
           <Topbar />
           <Dashboard />
+          <Today/>
+
         </div>
       </div>
     </>
