@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Sidebar from './components/Sidebar';
 import Topbar from './components/Topbar';
 import BlobBackground from './components/BlobBackground';
+import Withdraw from './pages/Withdraw';
 
 // Pages
 import Dashboard from './pages/Dashboard';
@@ -23,7 +24,7 @@ function App() {
               <Route path="/" element={<Dashboard />} />
               <Route path="/deposit" element={<Deposit />} />
               {/* Optional routes if needed */}
-              <Route path="/today" element={<Today />} />
+              <Route path="/withdraw" element={<Withdraw />} />
               <Route path="/performance" element={<PerformanceChart />} />
             </Routes>
           </div>

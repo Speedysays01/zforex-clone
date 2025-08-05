@@ -10,7 +10,7 @@ import {
 const menuItems = [
   { icon: <FaHome />, label: 'Dashboard', path: '/' },
   { icon: <FaMoneyBillAlt />, label: 'Deposit', path: '/deposit' },
-  { icon: <FaExchangeAlt />, label: 'Withdrawal', path: '/withdrawal' },
+  { icon: <FaExchangeAlt />, label: 'Withdraw', path: '/withdraw' },
   { icon: <FaExchangeAlt />, label: 'Transfer', path: '/transfer' },
   { icon: <FaHistory />, label: 'Transaction History', path: '/transactions' },
   { icon: <FaUserPlus />, label: 'Open New Account', path: '/open-account' },
