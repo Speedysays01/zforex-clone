@@ -9,6 +9,7 @@ import TransactionHistory from './pages/TransactionHistory';
 import New from './pages/New'; // if you have a New component, otherwise remove this import
 import AccountList from './pages/AccountList';
 import TradingContest from './pages/TradingContest';
+import TradingPlatform from './pages/TradingPlatform'; // if you have this page, otherwise remove this import
 
 // Pages
 import Dashboard from './pages/Dashboard';
@@ -35,6 +36,7 @@ function App() {
                <Route path="/open-account" element={<New />} />
                    <Route path="/accounts" element={<AccountList />} />
                      <Route path="/contest" element={<TradingContest />} />
+                      <Route path="/platforms" element={<TradingPlatform/>} />
             </Routes>
           </div>
         </div>
