@@ -11,7 +11,7 @@ import AccountList from './pages/AccountList';
 import TradingContest from './pages/TradingContest';
 import TradingPlatform from './pages/TradingPlatform'; // if you have this page, otherwise remove this import
 import ReferralProgram from './pages/RefrralProgram';
-
+import PartnerAccount from './pages/PartnerAccount';
 // Pages
 import Dashboard from './pages/Dashboard';
 import Deposit from './pages/Deposit'; // make sure you have this
@@ -39,6 +39,7 @@ function App() {
                      <Route path="/contest" element={<TradingContest />} />
                       <Route path="/platforms" element={<TradingPlatform/>} />
                        <Route path="/refer" element={<ReferralProgram/>} />
+                       <Route path='/ib-account' element={<PartnerAccount />} />
             </Routes>
           </div>
         </div>
