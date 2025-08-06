@@ -10,6 +10,7 @@ import New from './pages/New'; // if you have a New component, otherwise remove 
 import AccountList from './pages/AccountList';
 import TradingContest from './pages/TradingContest';
 import TradingPlatform from './pages/TradingPlatform'; // if you have this page, otherwise remove this import
+import ReferralProgram from './pages/RefrralProgram';
 
 // Pages
 import Dashboard from './pages/Dashboard';
@@ -37,6 +38,7 @@ function App() {
                    <Route path="/accounts" element={<AccountList />} />
                      <Route path="/contest" element={<TradingContest />} />
                       <Route path="/platforms" element={<TradingPlatform/>} />
+                       <Route path="/refer" element={<ReferralProgram/>} />
             </Routes>
           </div>
         </div>
