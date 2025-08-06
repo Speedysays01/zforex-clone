@@ -8,6 +8,7 @@ import Transfer from './pages/Transfer';
 import TransactionHistory from './pages/TransactionHistory';
 import New from './pages/New'; // if you have a New component, otherwise remove this import
 import AccountList from './pages/AccountList';
+import TradingContest from './pages/TradingContest';
 
 // Pages
 import Dashboard from './pages/Dashboard';
@@ -33,6 +34,7 @@ function App() {
               <Route path="/transactions" element={<TransactionHistory />} />
                <Route path="/open-account" element={<New />} />
                    <Route path="/accounts" element={<AccountList />} />
+                     <Route path="/contest" element={<TradingContest />} />
             </Routes>
           </div>
         </div>
